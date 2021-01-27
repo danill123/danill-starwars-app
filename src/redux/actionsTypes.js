@@ -1,0 +1,2 @@
+export const FETCH_PEOPLE = "FETCH_PEOPLE"
+export const ERROR_FETCH_PEOPE = "ERROR_FETCH_PEOPE"
