@@ -26,8 +26,8 @@ class People extends Component {
                 <div className="row">
                     { list_data.map((key, index) => {
                         return (
-                            <div className="col-sm-3 col-md-4 mt-2" key={index}>
-                                <Card className="shadow">
+                            <div className="col-sm-12 col-md-4 mt-2" key={index}>
+                                <Card className="hover_shadow">
                                     <CardBody>
                                     <CardTitle tag="h5">{key.name}</CardTitle>
                                     <div className="row container d-flex justify-content-around">

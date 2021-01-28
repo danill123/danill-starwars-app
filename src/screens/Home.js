@@ -15,7 +15,7 @@ class Home extends Component {
                     <img src="https://image.shutterstock.com/image-photo/kiev-ukraine-september-11-2018-260nw-1293816985.jpg" width="300"/>
                 </div>
                 <div className="d-flex justify-content-center">
-                    <div className="btn-group shadow">
+                    <div className="btn-group hover_shadow">
                         <NavLink exact to="/people" activeClassName="text-dark" className="btn btn-primary">
                             People
                         </NavLink>

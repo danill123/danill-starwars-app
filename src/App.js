@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './external.css';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { createStore , applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
