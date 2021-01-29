@@ -1,4 +1,4 @@
-import { FETCH_SPECIES } from '../actionsTypes'
+import { FETCH_SPECIES, NEXT_FETCH_SPECIES } from '../actionsTypes'
 
 export const get_species = () => {
     return async dispatch => {
@@ -17,7 +17,7 @@ export const next_species_data = (uri) => {
         try {
             let url = await fetch(uri);
             let data_parse = await url.json()
-            dispatch({ type: FETCH_SPECIES, list_result : data_parse['results'], next_uri : data_parse['next'] })
+            dispatch({ type: NEXT_FETCH_SPECIES, list_result : data_parse['results'], next_uri : data_parse['next'] })
         } catch (error) {
             // error handling
         }
