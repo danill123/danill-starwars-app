@@ -2,7 +2,8 @@ import { FETCH_PLANET, NEXT_FETCH_PLANET } from '../actionsTypes';
 
 const initialState = {
     list: [],
-    next_uri: ''
+    next_uri: '',
+    page : 1
 }
 
 export default (state=initialState, action) => {
