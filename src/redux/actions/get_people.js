@@ -15,7 +15,7 @@ export const get_people = () => {
 export const next_people_data = (url) => {
     return async dispatch => {
         try {
-            let uri = await fetch(url);
+            let uri = await fetch(`${url}`, {mode: 'cors'});
             let data_parse = await uri.json()
             dispatch({ type: NEXT_FETCH_PEOPLE, list_result : data_parse['results'], next_uri : data_parse['next'] })
         } catch (error) {

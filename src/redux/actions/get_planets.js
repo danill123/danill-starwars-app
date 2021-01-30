@@ -15,7 +15,7 @@ export const get_planets = () => {
 export const next_planets_data = (url) => {
     return async dispatch => {
         try {
-            let uri = await fetch(url);
+            let uri = await fetch(`${url}`, {mode: 'cors'});
             let data_parse = await uri.json()
             dispatch({ type: NEXT_FETCH_PLANET, list_result : data_parse['results'], next_uri : data_parse['next'] ? data_parse['next'] : null })
         } catch (error) {

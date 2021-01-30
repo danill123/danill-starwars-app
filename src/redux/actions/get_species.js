@@ -15,7 +15,7 @@ export const get_species = () => {
 export const next_species_data = (uri) => {
     return async dispatch => {
         try {
-            let url = await fetch(uri);
+            let url = await fetch(`${uri}`, {mode: 'cors'});
             let data_parse = await url.json()
             dispatch({ type: NEXT_FETCH_SPECIES, list_result : data_parse['results'], next_uri : data_parse['next'] ? data_parse['next'] : null })
         } catch (error) {
