@@ -1,4 +1,4 @@
-import { FETCH_SPECIES, NEXT_FETCH_SPECIES } from '../actionsTypes';
+import { FETCH_SPECIES, NEXT_FETCH_SPECIES, PARSING_HTTP_TO_HTTPS } from '../actionsTypes';
 
 const initialState = {
     list: [],
@@ -9,9 +9,9 @@ const initialState = {
 export default (state=initialState, action) => {
     switch (action.type) {
         case FETCH_SPECIES:
-            return { ...state, list : action.list_result, next_uri : action.next_uri }
+            return { ...state, list : action.list_result, next_uri : PARSING_HTTP_TO_HTTPS(action.next_uri) }
         case NEXT_FETCH_SPECIES:
-            return { ...state, list : state.list.concat(action.list_result), next_uri : action.next_uri }
+            return { ...state, list : state.list.concat(action.list_result), next_uri : PARSING_HTTP_TO_HTTPS(action.next_uri) }
         default:
             return state;
     }

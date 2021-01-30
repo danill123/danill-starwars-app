@@ -10,9 +10,9 @@ export const ERROR_FETCH_SPECIES = "ERROR_FETCH_SPECIES"
 export const FETCH_STARSHIPS = "FETCH_STARSHIPS"
 export const NEXT_FETCH_STARSHIPS = "NEXT_FETCH_STARSHIPS";
 export const ERROR_FETCH_STARSHIPS = "ERROR_FETCH_STARSHIPS"
-// export const PARSING_HTTP_TO_HTTPS = () => {
-//     let url = "http://swapi.dev/api/starships";
-//     let secure_str = "s";
-//     let position = 4;
-//     return [url.slice(0, position), secure_str, url.slice(position)].join('');
-// }
+export const PARSING_HTTP_TO_HTTPS = (str) => {
+    let url = str;
+    let secure_str = "s";
+    let position = 4;
+    return [url.slice(0, position), secure_str, url.slice(position)].join('');
+}
